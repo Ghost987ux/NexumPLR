@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap');
+
+:root {
+  --bg-dark: #0a0f0a;
+  --green: #00ff88;
+  --green-dark: #009f59;
+  --text-light: #e6f7ef;
+  --text-muted: #a0b5a3;
+  --btn-radius: 8px;
+  --transition: 0.3s ease;
+  --container-width: 1100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  color: var(--green);
+  letter-spacing: 2px;
+}
+
+.nav a {
+  color: var(--text-muted);
+  margin-left: 28px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.nav a:hover,
+.nav a:focus {
+  color: var(--green);
+  outline: none;
+}
+
+main {
+  padding-top: 80px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  z-index: 5;
+}
+
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.6rem;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  color: var(--text-light);
+}
+
+.hero h1 span {
+  color: var(--green);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 32px;
+  color: var(--text-muted);
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: var(--btn-radius);
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color var(--transition), color var(--transition);
+  text-decoration: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-primary {
+  background-color: var(--green);
+  color: #04110a;
+  box-shadow: 0 8px 20px rgba(0, 255, 136, 0.24);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--green-dark);
+  outline: none;
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.35);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--green);
+  color: var(--green);
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+  background-color: var(--green);
+  color: #04110a;
+  outline: none;
+}
+
+/* PARTICLES CANVAS */
+#particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* BENEFICIOS */
+.beneficios {
+  margin: 80px auto 100px;
+  text-align: center;
+}
+
+.beneficios h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: var(--green);
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.beneficio-card {
+  background: #111a11;
+  border-radius: 14px;
+  padding: 30px 25px;
+  box-shadow: 0 6px 18px rgba(0, 255, 136, 0.12);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.beneficio-card:hover,
+.beneficio-card:focus-within {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 32px rgba(0, 255, 136, 0.25);
+}
+
+.beneficio-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+  color: var(--green);
+}
+
+.beneficio-card p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* PRODUTOS */
+.produtos {
+  margin-bottom: 120px;
+  text-align: center;
+}
+
+.produtos h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  color: var(--green);
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 28px;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.produto-card {
+  background: #111a11;
+  border-radius: 14px;
+  padding: 30px 25px;
+  box-shadow: 0 6px 18px rgba(0, 255, 136, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.produto-card:hover,
+.produto-card:focus-within {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 32px rgba(0, 255, 136, 0.25);
+}
+
+.produto-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--green);
+}
+
+.produto-card p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 28px;
+  line-height: 1.4;
+}
+
+/* CONTATO */
+.contato {
+  background: var(--green);
+  color: #04110a;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contato h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+}
+
+.contato p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+footer {
+  background: #000700;
+  color: var(--text-muted);
+  padding: 25px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px) {
+  .header-container {
+    padding: 12px 15px;
+  }
+  .nav a {
+    margin-left: 12px;
+    font-size: 0.9rem;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .beneficios-grid, .produtos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+  }
+
+  .contato {
+    padding: 60px 15px;
+    max-width: 100%;
+  }
+}

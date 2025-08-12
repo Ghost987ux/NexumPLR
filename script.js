@@ -1,3 +1,4 @@
+// PARTICLES BACKGROUND - HERO SECTION
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 
@@ -60,9 +61,8 @@ initCanvas();
 createParticles();
 animate();
 
-
-// WhatsApp redirect with message for each produto button
-const numeroZap = "5562991125182";
+// WhatsApp redirect com mensagem automática
+const numeroZap = "556299119182";
 
 document.querySelectorAll(".zap-btn").forEach(botao => {
   botao.addEventListener("click", (e) => {

@@ -62,7 +62,7 @@ createParticles();
 animate();
 
 // WhatsApp redirect com mensagem automática
-const numeroZap = "556299119182";
+const numeroZap = "5562991125182";
 
 document.querySelectorAll(".zap-btn").forEach(botao => {
   botao.addEventListener("click", (e) => {
